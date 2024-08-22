@@ -56,7 +56,7 @@
         nick_mc_hwpwiden: nick_mc_hwpwiden {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LS(K)) &kp LA(LS(P))>;
+            bindings = <&kp LA(LS(K)) &kp LA(LS(W))>;
             label = "NICK_MC_HWPWIDEN";
         };
     };
