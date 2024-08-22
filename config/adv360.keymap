@@ -32,27 +32,6 @@
     };
 
     macros {
-        nick_mc_copy: nick_mc_paste {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(C)>;
-            label = "NICK_MC_PASTE";
-        };
-
-        nick_mc_paste: nick_mc_copy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(V)>;
-            label = "NICK_MC_COPY";
-        };
-
-        nick_mc_staytop: nick_mc_staytop {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LG(LS(T))>;
-            label = "NICK_MC_STAYTOP";
-        };
-
         nick_mc_linedel: nick_mc_linedel {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -67,25 +46,18 @@
             label = "NICK_MC_LINECOPY";
         };
 
-        nick_mc_capture: nick_mc_capture {
+        nick_mc_hwpnarrow: nick_mc_hwpnarrow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LS(S))>;
-            label = "NICK_MC_CAPTURE";
+            bindings = <&kp LA(LS(N)) &kp LA(LS(J))>;
+            label = "NICK_MC_HWPNARROW";
         };
 
-        nick_mc_selleft: nick_mc_selleft {
+        nick_mc_hwpwiden: nick_mc_hwpwiden {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(LEFT))>;
-            label = "NICK_MC_SELLEFT";
-        };
-
-        nick_mc_selright: nick_mc_selright {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LS(RIGHT))>;
-            label = "NICK_MC_SELRIGHT";
+            bindings = <&kp LA(LS(K)) &kp LA(LS(P))>;
+            label = "NICK_MC_HWPWIDEN";
         };
     };
 
@@ -96,7 +68,7 @@
             bindings = <
 &hm PLUS EQUAL       &hm EXCLAMATION N1  &hm AT_SIGN N2  &hm HASH N3  &hm DOLLAR N4  &hm PERCENT N5  &tog 1                                                        &mo 3           &hm CARET N6  &hm AMPERSAND N7  &hm ASTERISK N8  &hm LEFT_PARENTHESIS N9      &hm RIGHT_PARENTHESIS N0       &hm UNDERSCORE MINUS
 &hm LC(LA(TAB)) TAB  &kp Q               &kp W           &kp E        &kp R          &kp T           &kp ESC                                                       &mo 4           &kp Y         &kp U             &kp I            &kp O                        &kp P                          &hm PIPE BACKSLASH
-&kp LSHIFT           &kp A               &kp S           &kp D        &kp F          &kp G           &kp DEL   &kp LCTRL  &kp LALT      &kp LGUI   &hm RCTRL RALT  &hm LC(E) RALT  &hm RALT H    &lt 4 J           &kp K            &kp L                        &hm COLON SEMICOLON            &hm DOUBLE_QUOTES APOSTROPHE
+&kp LSHIFT           &kp A               &kp S           &kp D        &kp F          &kp G           &kp DEL   &kp LCTRL  &kp LALT      &kp LGUI   &hm RCTRL RALT  &hm LC(E) RALT  &hm RALT H    &lt 4 J           &lt 5 K          &lt 6 L                      &hm COLON SEMICOLON            &hm DOUBLE_QUOTES APOSTROPHE
 &kp LSHIFT           &kp Z               &kp X           &hm LC(C) C  &hm LC(V) V    &hm LG(V) B                          &kp HOME      &kp PG_UP                                  &hm LC(E) N   &kp M             &kp COMMA        &kp DOT                      &hm QUESTION SLASH             &kp RSHFT
 &tog 2               &kp GRAVE           &kp CAPS        &kp LEFT     &kp RIGHT                      &kp BSPC  &kp SPACE  &kp END       &kp PG_DN  &kp ENTER       &kp SPACE                     &kp UP            &kp DOWN         &hm LEFT_BRACE LEFT_BRACKET  &hm RIGHT_BRACE RIGHT_BRACKET  &hm K_APP INS
             >;
@@ -134,11 +106,31 @@
 
         layer_mymacros {
             bindings = <
-&trans           &kp F1        &kp F2            &kp F3            &kp F4             &kp F5           &trans                                      &trans  &kp F6  &kp F7     &kp F8        &kp F9             &kp F10  &trans
-&kp LC(LA(TAB))  &kp LA(LEFT)  &kp LA(RIGHT)     &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))  &kp LG(LS(T))    &trans                                      &trans  &trans  &trans     &trans        &trans             &trans   &trans
-&trans           &trans        &nick_mc_capture  &nick_mc_linedel  &trans             &kp LC(LS(TAB))  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans        &nick_mc_linecopy  &trans   &trans
-&trans           &trans        &trans            &kp LC(C)         &kp LC(V)          &kp LC(TAB)                      &trans      &trans                  &trans  &trans     &trans        &trans             &trans   &trans
-&trans           &trans        &trans            &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))                   &trans  &trans  &trans      &trans  &trans  &trans          &kp LCTRL  &kp LEFT_ALT  &trans             &trans   &trans
+&trans           &kp F1        &kp F2         &kp F3            &kp F4             &kp F5           &trans                                      &trans  &kp F6  &kp F7                &kp F8            &kp F9             &kp F10  &trans
+&kp LC(LA(TAB))  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))  &kp LG(LS(T))    &trans                                      &trans  &trans  &trans                &trans            &trans             &trans   &trans
+&trans           &trans        &kp LG(LS(S))  &nick_mc_linedel  &trans             &kp LC(LS(TAB))  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans                &trans            &nick_mc_linecopy  &trans   &trans
+&trans           &trans        &trans         &kp LC(C)         &kp LC(V)          &kp LC(TAB)                      &trans      &trans                  &trans  &trans                &trans            &trans             &trans   &trans
+&trans           &trans        &trans         &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))                   &trans  &trans  &trans      &trans  &trans  &trans          &kp LC(LS(UP_ARROW))  &kp LC(LS(DOWN))  &trans             &trans   &trans
+            >;
+        };
+
+        Multiplier {
+            bindings = <
+&trans  &trans  &trans    &trans     &trans    &trans  &trans                                      &trans  &trans  &trans     &trans    &trans    &trans  &trans
+&trans  &trans  &trans    &trans     &trans    &trans  &trans                                      &trans  &trans  &trans     &trans    &trans    &trans  &trans
+&trans  &trans  &trans    &trans     &trans    &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans    &trans    &trans  &trans
+&trans  &trans  &trans    &trans     &trans    &trans                  &trans      &trans                  &trans  &trans     &trans    &trans    &trans  &trans
+&trans  &trans  &kp LGUI  &kp LCTRL  &kp LALT          &trans  &trans  &trans      &trans  &trans  &trans          &kp LCTRL  &kp LALT  &kp LGUI  &trans  &trans
+            >;
+        };
+
+        HWP {
+            bindings = <
+&trans  &trans  &trans    &trans        &trans     &trans  &trans                                      &trans  &trans  &trans              &trans             &trans  &trans  &trans
+&trans  &trans  &trans    &kp UP_ARROW  &trans     &trans  &trans                                      &trans  &trans  &trans              &trans             &trans  &trans  &trans
+&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp LA(LS(R))       &kp LS(LA(E))      &trans  &trans  &trans
+&trans  &trans  &trans    &trans        &trans     &trans                  &trans      &trans                  &trans  &nick_mc_hwpnarrow  &nick_mc_hwpwiden  &trans  &trans  &trans
+&trans  &trans  &trans    &trans        &trans             &trans  &trans  &trans      &trans  &trans  &trans          &trans              &trans             &trans  &trans  &trans
             >;
         };
     };
