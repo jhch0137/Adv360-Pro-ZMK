@@ -130,7 +130,7 @@
 &trans  &trans  &trans    &kp UP_ARROW  &trans     &trans  &trans                                      &trans  &trans  &trans              &trans             &trans  &trans  &trans
 &trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp LA(LS(R))       &kp LS(LA(E))      &trans  &trans  &trans
 &trans  &trans  &trans    &trans        &trans     &trans                  &trans      &trans                  &trans  &nick_mc_hwpnarrow  &nick_mc_hwpwiden  &trans  &trans  &trans
-&trans  &trans  &trans    &trans        &trans             &trans  &trans  &trans      &trans  &trans  &trans          &trans              &trans             &trans  &trans  &trans
+&trans  &trans  &trans    &trans        &trans             &trans  &trans  &trans      &trans  &trans  &trans          &kp LC(LSHIFT)      &trans             &trans  &trans  &trans
             >;
         };
     };
