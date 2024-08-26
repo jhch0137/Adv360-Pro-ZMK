@@ -116,7 +116,7 @@
 
         Multiplier {
             bindings = <
-&trans  &trans  &trans    &trans     &trans    &trans  &trans                                      &trans  &trans  &trans     &trans    &trans    &trans  &trans
+&trans  &kp F1  &trans    &trans     &trans    &trans  &trans                                      &trans  &trans  &trans     &trans    &trans    &trans  &trans
 &trans  &trans  &trans    &trans     &trans    &trans  &trans                                      &trans  &trans  &trans     &trans    &trans    &trans  &trans
 &trans  &trans  &trans    &trans     &trans    &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans    &trans    &trans  &trans
 &trans  &trans  &trans    &trans     &trans    &trans                  &trans      &trans                  &trans  &trans     &trans    &trans    &trans  &trans
@@ -132,6 +132,15 @@
 &trans  &trans  &trans    &trans        &trans     &trans                  &trans      &trans                  &trans  &nick_mc_hwpnarrow  &nick_mc_hwpwiden  &trans  &trans  &trans
 &trans  &trans  &trans    &trans        &trans             &trans  &trans  &trans      &trans  &trans  &trans          &kp LC(LSHIFT)      &trans             &trans  &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        Multi_FN {
+            if-layers = <5>;
+            then-layer = <2>;
         };
     };
 };
