@@ -116,11 +116,11 @@
 
         Multiplier {
             bindings = <
-&trans  &kp F1  &trans    &trans     &trans    &trans  &trans                                      &trans  &trans  &trans     &trans    &trans    &trans  &trans
-&trans  &trans  &trans    &trans     &trans    &trans  &trans                                      &trans  &trans  &trans     &trans    &trans    &trans  &trans
-&trans  &trans  &trans    &trans     &trans    &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans    &trans    &trans  &trans
-&trans  &trans  &trans    &trans     &trans    &trans                  &trans      &trans                  &trans  &trans     &trans    &trans    &trans  &trans
-&trans  &trans  &kp LGUI  &kp LCTRL  &kp LALT          &trans  &trans  &trans      &trans  &trans  &trans          &kp LCTRL  &kp LALT  &kp LGUI  &trans  &trans
+&trans  &kp F1  &kp F2    &kp F3     &kp F4    &kp F5  &trans                                      &trans  &kp F6  &kp F7     &kp F8    &kp F9    &kp F10  &trans
+&trans  &trans  &trans    &trans     &trans    &trans  &trans                                      &trans  &trans  &trans     &trans    &trans    &trans   &trans
+&trans  &trans  &trans    &trans     &trans    &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans    &trans    &trans   &trans
+&trans  &trans  &trans    &trans     &trans    &trans                  &trans      &trans                  &trans  &trans     &trans    &trans    &trans   &trans
+&trans  &trans  &kp LGUI  &kp LCTRL  &kp LALT          &trans  &trans  &trans      &trans  &trans  &trans          &kp LCTRL  &kp LALT  &kp LGUI  &trans   &trans
             >;
         };
 
@@ -135,12 +135,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        Multi_FN {
-            if-layers = <5>;
-            then-layer = <2>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
