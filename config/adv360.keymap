@@ -113,11 +113,11 @@
 
         default_layer {
             bindings = <
-&kp ESC     &hm EXCLAMATION N1  &hm AT_SIGN N2  &hm HASH N3  &hm DOLLAR N4  &hm PERCENT N5  &hm LG(TAB) K_APP                                                                                  &mo 3           &hm CARET N6  &hm AMPERSAND N7  &hm ASTERISK N8  &hm LEFT_PARENTHESIS N9      &hm RIGHT_PARENTHESIS N0       &hm UNDERSCORE MINUS
-&kp TAB     &kp Q               &hm LC(W) W     &kp E        &kp R          &kp T           &hm TILDE GRAVE                                                                                    &hm LCTRL BSPC  &kp Y         &kp U             &kp I            &kp O                        &kp P                          &hm PLUS EQUAL
-&td_scaps   &kp A               &kp S           &kp D        &kp F          &kp G           &hm LA(LC(LS(N1))) ENTER  &hm LC(LS(HOME)) HOME  &hm LC(LS(END)) END      &kp LEFT      &kp RIGHT  &kp LGUI        &kp H         &kp J             &hm RALT K       &lt 6 L                      &hm COLON SEMICOLON            &hm DOUBLE_QUOTES APOSTROPHE
-&kp LSHIFT  &hm LC(Z) Z         &hm LC(X) X     &hm LC(C) C  &hm LC(V) V    &hm LG(V) B                                                      &kp PG_UP                &kp UP_ARROW                             &kp N         &kp M             &kp COMMA        &kp DOT                      &hm QUESTION SLASH             &kp BACKSLASH
-&kp ENTER   &kp BSPC            &hm INS DEL     &kp LCTRL    &kp LALT                       &kp BSPC                  &lt 4 SPACE            &kp PAGE_DOWN            &kp DOWN      &mo 4      &kp SPACE                     &hm LSHIFT RALT   &hm LALT RCTRL   &hm LEFT_BRACE LEFT_BRACKET  &hm RIGHT_BRACE RIGHT_BRACKET  &kp ENTER
+&kp ESC     &hm EXCLAMATION N1  &hm AT_SIGN N2  &hm HASH N3  &hm DOLLAR N4  &hm PERCENT N5  &hm LG(TAB) K_APP                                                                                    &mo 3           &hm CARET N6  &hm AMPERSAND N7  &hm ASTERISK N8  &hm LEFT_PARENTHESIS N9      &hm RIGHT_PARENTHESIS N0       &hm UNDERSCORE MINUS
+&kp TAB     &kp Q               &hm LC(W) W     &kp E        &kp R          &kp T           &hm TILDE GRAVE                                                                                      &hm LCTRL BSPC  &kp Y         &kp U             &kp I            &kp O                        &kp P                          &hm PLUS EQUAL
+&kp LSHIFT  &kp A               &kp S           &kp D        &kp F          &kp G           &hm LA(LC(LS(N1))) ENTER  &hm LC(LS(HOME)) HOME  &hm LC(LS(END)) END      &kp LEFT      &kp RIGHT    &kp LGUI        &kp H         &kp J             &hm RALT K       &lt 6 L                      &hm COLON SEMICOLON            &hm DOUBLE_QUOTES APOSTROPHE
+&kp LSHIFT  &hm LC(Z) Z         &hm LC(X) X     &hm LC(C) C  &hm LC(V) V    &hm LG(V) B                                                      &kp PG_UP                &kp UP_ARROW                               &kp N         &kp M             &kp COMMA        &kp DOT                      &hm QUESTION SLASH             &kp BACKSLASH
+&kp ENTER   &kp BSPC            &hm INS DEL     &kp LCTRL    &kp LALT                       &kp BSPC                  &lt 4 SPACE            &kp PAGE_DOWN            &kp DOWN      &lt 4 ENTER  &kp SPACE                     &hm LSHIFT RALT   &hm LALT RCTRL   &hm LEFT_BRACE LEFT_BRACKET  &hm RIGHT_BRACE RIGHT_BRACKET  &kp ENTER
             >;
         };
 
@@ -153,11 +153,11 @@
 
         layer_mymacros {
             bindings = <
-&trans  &kp F1            &kp F2             &kp F3             &kp F4             &kp F5         &trans                                                                       &trans  &kp F6  &kp F7     &kp F8              &kp F9             &kp F10  &kp F11
-&trans  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp LG(LC(LEFT))   &kp LG(LC(RIGHT))  &kp LG(LS(T))  &trans                                                                       &trans  &trans  &trans     &trans              &trans             &trans   &kp F12
-&trans  &nick_mc_linesel  &kp LG(LS(S))      &nick_mc_linedel   &trans             &trans         &trans  &hm LA(LEFT) LC(PG_UP)  &hm LA(RIGHT) LC(PG_DN)      &trans  &trans  &trans  &trans  &trans     &kp LA(LS(R))       &kp LA(LS(E))      &trans   &trans
-&trans  &trans            &trans             &nick_mc_linecopy  &kp LC(LA(LG(V)))  &trans                                         &trans                       &trans                  &trans  &trans     &nick_mc_hwpnarrow  &nick_mc_hwpwiden  &trans   &trans
-&trans  &trans            &trans             &trans             &trans                            &trans  &trans                  &trans                       &trans  &trans  &trans          &kp LCTRL  &trans              &trans             &trans   &trans
+&kp SLCK  &kp F1            &kp F2             &kp F3             &kp F4             &kp F5         &trans                                                                       &trans  &kp F6  &kp F7     &kp F8              &kp F9             &kp F10  &kp F11
+&trans    &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp LG(LC(LEFT))   &kp LG(LC(RIGHT))  &kp LG(LS(T))  &trans                                                                       &trans  &trans  &trans     &trans              &trans             &trans   &kp F12
+&kp CAPS  &nick_mc_linesel  &kp LG(LS(S))      &nick_mc_linedel   &trans             &trans         &trans  &hm LA(LEFT) LC(PG_UP)  &hm LA(RIGHT) LC(PG_DN)      &trans  &trans  &trans  &trans  &trans     &kp LA(LS(R))       &kp LA(LS(E))      &trans   &trans
+&trans    &trans            &trans             &nick_mc_linecopy  &kp LC(LA(LG(V)))  &trans                                         &trans                       &trans                  &trans  &trans     &nick_mc_hwpnarrow  &nick_mc_hwpwiden  &trans   &trans
+&trans    &trans            &trans             &trans             &trans                            &trans  &trans                  &trans                       &trans  &trans  &trans          &kp LCTRL  &trans              &trans             &trans   &trans
             >;
         };
 
