@@ -19,6 +19,11 @@
 
 &sl { release-after-ms = <2000>; };
 
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <150>;
+};
+
 / {
     behaviors {
         #include "macros.dtsi"
