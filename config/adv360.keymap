@@ -159,11 +159,11 @@
 
         layer_mymacros {
             bindings = <
-&kp SLCK  &kp F1            &kp F2             &kp F3             &kp F4             &kp F5         &trans                                                                       &trans  &kp F6  &kp F7     &kp F8              &kp F9             &kp F10  &kp F11
-&trans    &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp LG(LC(LEFT))   &kp LG(LC(RIGHT))  &kp LG(LS(T))  &trans                                                                       &trans  &trans  &trans     &trans              &trans             &trans   &kp F12
-&kp CAPS  &nick_mc_linesel  &kp LG(LS(S))      &nick_mc_linedel   &trans             &trans         &trans  &hm LA(LEFT) LC(PG_UP)  &hm LA(RIGHT) LC(PG_DN)      &trans  &trans  &trans  &trans  &trans     &kp LA(LS(R))       &kp LA(LS(E))      &trans   &trans
-&trans    &trans            &trans             &nick_mc_linecopy  &kp LC(LA(LG(V)))  &trans                                         &trans                       &trans                  &trans  &trans     &nick_mc_hwpnarrow  &nick_mc_hwpwiden  &trans   &trans
-&trans    &trans            &trans             &trans             &trans                            &trans  &trans                  &trans                       &trans  &trans  &trans          &kp LCTRL  &trans              &trans             &trans   &trans
+&kp SLCK      &kp F1            &kp F2             &kp F3             &kp F4             &kp F5         &trans                                                                       &trans  &kp F6         &kp F7         &kp F8              &kp F9             &kp F10  &kp F11
+&kp CAPSLOCK  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp LG(LC(LEFT))   &kp LG(LC(RIGHT))  &kp LG(LS(T))  &trans                                                                       &trans  &trans         &trans         &kp UP_ARROW        &trans             &trans   &kp F12
+&trans        &nick_mc_linesel  &kp LG(LS(S))      &nick_mc_linedel   &trans             &trans         &trans  &hm LA(LEFT) LC(PG_UP)  &hm LA(RIGHT) LC(PG_DN)      &trans  &trans  &trans  &trans         &kp LEFT       &kp DOWN            &kp RIGHT          &trans   &trans
+&trans        &trans            &trans             &nick_mc_linecopy  &kp LC(LA(LG(V)))  &trans                                         &trans                       &trans                  &kp LA(LS(R))  &kp LA(LS(E))  &nick_mc_hwpnarrow  &nick_mc_hwpwiden  &trans   &trans
+&trans        &trans            &trans             &trans             &trans                            &trans  &trans                  &trans                       &trans  &trans  &trans                 &kp LCTRL      &trans              &trans             &trans   &trans
             >;
         };
 
