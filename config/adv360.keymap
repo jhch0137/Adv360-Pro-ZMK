@@ -13,6 +13,9 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 &sk { release-after-ms = <2000>; };
@@ -123,7 +126,7 @@
 &kp TAB     &kp Q               &hm LC(W) W     &kp E        &kp R          &kp T           &hm TILDE GRAVE                                                                                    &hm LCTRL BSPC  &kp Y         &kp U             &kp I            &kp O                        &kp P                          &hm PLUS EQUAL
 &kp LSHIFT  &kp A               &kp S           &kp D        &kp F          &kp G           &hm LA(LC(LS(N1))) ENTER  &hm LC(LS(HOME)) HOME  &hm LC(LS(END)) END      &kp LEFT      &kp RIGHT  &kp LGUI        &kp H         &kp J             &kp K            &kp L                        &hm COLON SEMICOLON            &hm DOUBLE_QUOTES APOSTROPHE
 &kp LSHIFT  &hm LC(Z) Z         &hm LC(X) X     &hm LC(C) C  &hm LC(V) V    &hm LG(V) B                                                      &kp PG_UP                &kp UP_ARROW                             &kp N         &kp M             &kp COMMA        &kp DOT                      &hm QUESTION SLASH             &kp BACKSLASH
-&kp ENTER   &kp BSPC            &hm INS DEL     &kp LCTRL    &kp LALT                       &lt 4 BSPC                &lt 4 SPACE            &kp PAGE_DOWN            &kp DOWN      &mo 4      &kp SPACE                     &hm LSHIFT RALT   &hm LALT RCTRL   &hm LEFT_BRACE LEFT_BRACKET  &hm RIGHT_BRACE RIGHT_BRACKET  &kp ENTER
+&kp ENTER   &kp BSPC            &hm INS DEL     &kp LCTRL    &kp LALT                       &lt 4 BSPC                &lt 6 SPACE            &kp PAGE_DOWN            &kp DOWN      &mo 4      &kp SPACE                     &hm LSHIFT RALT   &hm LALT RCTRL   &hm LEFT_BRACE LEFT_BRACKET  &hm RIGHT_BRACE RIGHT_BRACKET  &kp ENTER
             >;
         };
 
@@ -174,6 +177,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &kp ENTER  &kp ENTER          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans          &trans          &trans           &trans  &trans
             >;
         };
     };
