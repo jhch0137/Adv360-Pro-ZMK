@@ -13,9 +13,6 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 &sk { release-after-ms = <2000>; };
@@ -125,8 +122,8 @@
 &kp ESC     &hm EXCLAMATION N1  &hm AT_SIGN N2  &hm HASH N3  &hm DOLLAR N4  &hm PERCENT N5  &hm LG(TAB) K_APP                                                                                  &mo 3           &hm CARET N6  &hm AMPERSAND N7  &hm ASTERISK N8  &hm LEFT_PARENTHESIS N9      &hm RIGHT_PARENTHESIS N0       &hm UNDERSCORE MINUS
 &kp TAB     &kp Q               &hm LC(W) W     &kp E        &kp R          &kp T           &hm TILDE GRAVE                                                                                    &hm LCTRL BSPC  &kp Y         &kp U             &kp I            &kp O                        &kp P                          &hm PLUS EQUAL
 &kp LSHIFT  &kp A               &kp S           &kp D        &kp F          &kp G           &hm LA(LC(LS(N1))) ENTER  &hm LC(LS(HOME)) HOME  &hm LC(LS(END)) END      &kp LEFT      &kp RIGHT  &kp LGUI        &kp H         &kp J             &kp K            &kp L                        &hm COLON SEMICOLON            &hm DOUBLE_QUOTES APOSTROPHE
-&kp LSHIFT  &hm LC(Z) Z         &hm LC(X) X     &hm LC(C) C  &hm LC(V) V    &hm LG(V) B                                                      &kp PG_UP                &kp UP_ARROW                             &kp N         &kp M             &kp COMMA        &kp DOT                      &hm QUESTION SLASH             &kp BACKSLASH
-&kp ENTER   &kp LA(SEMICOLON)   &hm INS DEL     &kp LCTRL    &kp LALT                       &lt 4 BSPC                &lt 6 SPACE            &kp PAGE_DOWN            &kp DOWN      &mo 4      &kp SPACE                     &hm LSHIFT RALT   &hm LALT RCTRL   &hm LEFT_BRACE LEFT_BRACKET  &hm RIGHT_BRACE RIGHT_BRACKET  &kp ENTER
+&kp LSHIFT  &hm LC(Z) Z         &hm LC(X) X     &hm LC(C) C  &hm LC(V) V    &kp B                                                            &kp PG_UP                &kp UP_ARROW                             &kp N         &kp M             &kp COMMA        &kp DOT                      &hm QUESTION SLASH             &kp BACKSLASH
+&kp ENTER   &kp LA(SEMICOLON)   &hm INS DEL     &kp LCTRL    &kp LALT                       &lt 4 BSPC                &kp SPACE              &kp PAGE_DOWN            &kp DOWN      &mo 4      &kp SPACE                     &hm LSHIFT RALT   &hm LALT RCTRL   &hm LEFT_BRACE LEFT_BRACKET  &hm RIGHT_BRACE RIGHT_BRACKET  &kp ENTER
             >;
         };
 
@@ -162,11 +159,11 @@
 
         layer_mymacros {
             bindings = <
-&kp SLCK      &kp F1            &kp F2             &kp F3             &kp F4             &kp F5         &trans                                                                       &trans  &kp F6         &kp F7         &kp F8              &kp F9             &kp F10        &kp F11
-&kp CAPSLOCK  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp LG(LC(LEFT))   &kp LG(LC(RIGHT))  &kp LG(LS(T))  &trans                                                                       &trans  &trans         &trans         &kp UP_ARROW        &trans             &trans         &kp F12
-&trans        &nick_mc_linesel  &kp LG(LS(S))      &nick_mc_linedel   &trans             &trans         &trans  &hm LA(LEFT) LC(PG_UP)  &hm LA(RIGHT) LC(PG_DN)      &trans  &trans  &trans  &trans         &kp LEFT       &kp DOWN            &kp RIGHT          &kp LA(LS(A))  &trans
-&trans        &trans            &trans             &nick_mc_linecopy  &kp LC(LA(LG(V)))  &trans                                         &trans                       &trans                  &kp LA(LS(R))  &kp LA(LS(E))  &nick_mc_hwpnarrow  &nick_mc_hwpwiden  &kp LA(LS(Z))  &trans
-&trans        &trans            &trans             &trans             &trans                            &trans  &trans                  &trans                       &trans  &trans  &trans                 &kp LCTRL      &trans              &trans             &trans         &trans
+&kp SLCK      &kp F1                     &kp F2                     &kp F3             &kp F4             &kp F5         &trans                                                                       &trans  &kp F6         &kp F7         &kp F8              &kp F9             &kp F10        &kp F11
+&kp CAPSLOCK  &hm LS(HOME) LS(LC(LEFT))  &hm LS(END) LS(LC(RIGHT))  &kp LG(LC(LEFT))   &kp LG(LC(RIGHT))  &kp LG(LS(T))  &trans                                                                       &trans  &trans         &trans         &kp UP_ARROW        &trans             &trans         &kp F12
+&trans        &nick_mc_linesel           &kp LG(LS(S))              &nick_mc_linedel   &trans             &trans         &trans  &hm LA(LEFT) LC(PG_UP)  &hm LA(RIGHT) LC(PG_DN)      &trans  &trans  &trans  &trans         &kp LEFT       &kp DOWN            &kp RIGHT          &kp LA(LS(A))  &trans
+&trans        &trans                     &trans                     &nick_mc_linecopy  &trans             &trans                                         &trans                       &trans                  &kp LA(LS(R))  &kp LA(LS(E))  &nick_mc_hwpnarrow  &nick_mc_hwpwiden  &kp LA(LS(Z))  &trans
+&trans        &trans                     &trans                     &trans             &trans                            &trans  &trans                  &trans                       &trans  &trans  &trans                 &kp LCTRL      &trans              &trans             &trans         &trans
             >;
         };
 
@@ -177,16 +174,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &kp ENTER  &kp ENTER          &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        Mouse {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans          &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans          &trans          &trans           &trans  &trans
             >;
         };
     };
